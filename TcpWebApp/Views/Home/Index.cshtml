@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to TCP Communication!</h1>
+    <p>Enter a message and send it via the TCP server.</p>
+
+    <div>
+        <input type="text" id="message" placeholder="Enter your message" />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="log"></div>
+</div>
+
+<script>
+    function sendMessage() {
+        let message = document.getElementById('message').value;
+        let log = document.getElementById('log');
+
+        log.innerHTML += "<p><strong>Sent:</strong> " + message + "</p>";
+    }
+</script>
